@@ -11,7 +11,7 @@ const Card = ({ img, name, detail}) => `
 $('#search-btn').click(() => {
 
   const word = $('#search-word').val();
-  // $('#results').empty();
+  $('#results').empty();
 
   $.ajax({
     url: 'https://itunes.apple.com/search?parameterkeyvalue',
@@ -32,9 +32,11 @@ $('#search-btn').click(() => {
       let img = response.results[i].artworkUrl100;
       let name = response.results[i].collectionName;
       let detail = response.results[i].collectionViewUrl;
+      let Img = img.replace(/100x100bb/g, '500x500bb');
+
   
       $('#results').append(
-        Card({img: img, name: name, detail: detail})
+        Card({img: Img, name: name, detail: detail})
       );
     }
     
