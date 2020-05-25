@@ -37,12 +37,12 @@
 }
 
 .nav-btn {
-position: absolute; 
-right: 20%;
-top: 10px;
-color: #777;
-border: none;
-cursor: pointer;
+  position: absolute; 
+  right: 20%;
+  top: 10px;
+  color: #777;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-btn:hover {

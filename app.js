@@ -23,11 +23,11 @@ $('#search-btn').click(() => {
       entry: 'music',
       // limit: '50',
       lang: 'ja_jp'
-      },
+    },
       dataType: 'jsonp',
 
   }).done((response) => {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < response.results.length; i++) {
 
       let img = response.results[i].artworkUrl100;
       let name = response.results[i].collectionName;
@@ -36,7 +36,6 @@ $('#search-btn').click(() => {
       $('#results').append(
         Card({img: img, name: name, detail: detail})
       );
-
     }
     
 
